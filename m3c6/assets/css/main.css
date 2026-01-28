@@ -1,0 +1,1317 @@
+/* =========================================
+
+   1. BASE
+
+   Reglas por defecto. Selectores de etiqueta puros.
+
+   ========================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+body {
+
+    font-family: 'Lato', sans-serif; /* Fuente cuerpo */
+
+    color: #3e2723; /* Café oscuro */
+
+    line-height: 1.6;
+
+    background-color: #fefeFa; /* Blanco hueso */
+
+}
+
+
+h1, h2, h3 {
+
+    font-family: 'Playfair Display', serif; /* Fuente títulos Gourmet */
+
+    margin-bottom: 0.5em;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+}
+
+
+/* =========================================
+
+   2. LAYOUT (Prefijo l-)
+
+   Estructura mayor: Grillas, Contenedores, Header, Footer.
+
+   ========================================= */
+
+
+.l-container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+}
+
+
+.l-header {
+
+    background-color: #fff;
+
+    padding: 1rem 0;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+.l-footer {
+
+    background-color: #3e2723;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 2rem 0;
+
+    margin-top: 3rem;
+
+}
+
+
+.l-section {
+
+    padding: 4rem 0;
+
+}
+
+
+/* Utilidad de Layout para Flexbox */
+
+.l-flex-between {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+/* Utilidad de Layout para Grid */
+
+.l-grid-3 {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 2rem;
+
+}
+
+
+/* =========================================
+
+   3. MODULE (Componentes Reutilizables)
+
+   Botones, Tarjetas, Navs, Heros.
+
+   ========================================= */
+
+
+/* --- Módulo: Brand --- */
+
+.brand {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+    color: #3e2723;
+
+}
+
+
+/* --- Módulo: Nav --- */
+
+.nav-link {
+
+    margin-left: 20px;
+
+    font-weight: 700;
+
+    transition: color 0.3s;
+
+}
+
+
+.nav-link:hover {
+
+    color: #d32f2f; /* Rojo suave */
+
+}
+
+
+/* --- Módulo: Button --- */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 10px 25px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    border: none;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    font-size: 0.9rem;
+
+}
+
+
+/* Subclase de modulo (Variante) */
+
+.btn-primary {
+
+    background-color: #3e2723;
+
+    color: #fff;
+
+}
+
+
+.btn-primary:hover {
+
+    background-color: #5d4037;
+
+}
+
+
+.btn-small {
+
+    padding: 8px 16px;
+
+    background-color: transparent;
+
+    border: 1px solid #3e2723;
+
+    color: #3e2723;
+
+    margin-top: 1rem;
+
+}
+
+
+.btn-small:hover {
+
+    background-color: #3e2723;
+
+    color: #fff;
+
+}
+
+
+/* --- Módulo: Hero revisar foto --- */
+
+.hero {
+
+    background: linear-gradient(rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.6)),
+
+                url('https://res.cloudinary.com/dj0cbwsvk/image/upload/v1768972381/WhatsApp_Image_2026-01-20_at_22.19.06_irjxbw.jpg');
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 8rem 0;
+
+}
+
+
+.hero-title {
+
+    font-size: 3.5rem;
+
+    margin-bottom: 0.5rem;
+
+}
+
+
+.hero-subtitle {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 2rem;
+
+    font-weight: 300;
+
+}
+
+/* ---Módulo botón Hero--- */
+.hero {
+    /* Asegúrate de tener una imagen de fondo o color que resalte */
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: sans-serif;
+}
+
+/* Botón Principal (Drive) */
+.btn-primary {
+    background-color: #e67e22;
+    color: white;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+}
+
+/* Botón Secundario (Descarga) */
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #2c3e50;
+}
+
+/* Iconos de Boxicons (Asegúrate de tener el link en el head) */
+.btn i {
+    font-size: 1.2rem;
+}
+
+
+/* --- Módulo: Card --- */
+
+.card {
+
+    background: #fff;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+    transition: transform 0.3s;
+
+    text-align: center;
+
+    position: relative;
+
+    border: 1px solid #efebe9;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.card-image {
+
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 3rem;
+
+    color: #fff;
+
+}
+
+
+.card-content {
+
+    padding: 2rem;
+
+}
+
+
+.card-title {
+
+    font-size: 1.4rem;
+
+    color: #3e2723;
+
+}
+
+
+.card-desc {
+
+    color: #795548;
+
+    font-size: 0.95rem;
+
+}
+
+
+/* Elemento interno del módulo */
+
+.card-badge {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    background-color: #d32f2f;
+
+    color: white;
+
+    padding: 5px 10px;
+
+    font-size: 0.7rem;
+
+    border-radius: 4px;
+
+    text-transform: uppercase;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+
+   4. STATE (Prefijo is-)
+
+   Modificaciones de estado (Activo, oculto, error, etc.)
+
+   ========================================= */
+
+
+/* Estado activo para link de navegación */
+
+.is-active {
+
+    color: #d32f2f;
+
+    border-bottom: 2px solid #d32f2f;
+
+}
+
+
+/* Estado destacado para una card */
+
+.card.is-highlighted {
+
+    border: 2px solid #3e2723;
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================================
+
+   4. STATE (Nuevos agregados para JS)
+
+   ========================================= */
+
+
+/* --- Estado: Header Scrolleado --- */
+
+/* Cuando el header tiene esta clase, se vuelve un poco transparente y con sombra */
+
+.l-header.is-scrolled {
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    box-shadow: 0 4px 12px rgba(62, 39, 35, 0.15);
+
+    padding: 0.5rem 0; /* Se hace más compacto */
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* --- Estado: Botón Agregado --- */
+
+/* Feedback verde cuando el usuario compra */
+
+.btn-small.is-added {
+
+    background-color: #2e7d32; /* Verde éxito */
+
+    color: #fff;
+
+    border-color: #2e7d32;
+
+    cursor: default;
+
+    transform: scale(1.05); /* Un pequeño "pop" */
+
+}
+
+
+/* =========================================
+
+   5. THEME (Opcional)
+
+   En este ejemplo, los colores ya están en módulos,
+
+   pero aquí irían overrides si tuviéramos un "Modo Oscuro"
+
+   ========================================= */
+
+
+   /* --- Estilos para Sidenav (Fusión) --- */
+
+/* --- ESTILO ÚNICO Y CORREGIDO PARA EL NAV --- */
+.sidenav {
+    height: 100%;
+    width: 0; /* Empieza cerradito */
+    position: fixed;
+    z-index: 2000; /* Lo ponemos por encima de TODO */
+    top: 0;
+    right: 0; 
+    background-color: #3e2723; /* Tu color café */
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    padding-top: 60px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+}
+
+.sidenav a {
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fefeFa;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Lato', sans-serif;
+    white-space: nowrap; /* Evita que el texto se amontone al cerrar */
+}
+
+.sidenav a:hover {
+    color: #d32f2f;
+    background-color: rgba(255,255,255,0.05);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+}
+
+/* Estilo para el botón de abrir (el que dice Menú) */
+.open-btn {
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: #3e2723;
+    text-transform: uppercase;
+}
+
+/* Estilo para el botón "Open" */
+
+.open-btn {
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    color: #3e2723;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+.open-btn:hover {
+
+    color: #d32f2f;
+
+}
+
+
+/*--servicios--*/
+
+/* --- Layout: Grid de 4 columnas --- */
+
+.l-grid-4 {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 1.5rem;
+
+    margin-top: 2rem;
+
+}
+
+
+/* --- Módulo: Servicios --- */
+
+.l-servicios {
+
+    background-color: #f7f3f2; /* Un tono ligeramente diferente para separar secciones */
+
+    text-align: center;
+
+}
+
+
+.service-item {
+
+    padding: 2rem 1rem;
+
+    background-color: #fff;
+
+    border-radius: 12px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    border-bottom: 3px solid transparent;
+
+}
+
+
+.service-item:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgba(62, 39, 35, 0.08);
+
+    border-color: #3e2723; /* Color café de la marca */
+
+}
+
+
+.service-icon {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 1rem;
+
+}
+
+
+.service-name {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.2rem;
+
+    color: #3e2723;
+
+    margin-bottom: 0.5rem;
+
+}
+
+
+.service-text {
+
+    font-size: 0.9rem;
+
+    color: #795548;
+
+}
+
+/*-- fin de servicios --*/
+
+  /* --- Formulario --- */
+  
+
+   /* --- CONFIGURACIÓN DEL GRID --- */
+.l-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* --- BASE DE LAS CARDS (Igual para todas) --- */
+.card-button {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-image-container {
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-button:hover .card-img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.card-btn-text {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* --- COLORES PERSONALIZADOS POR ID --- */
+#especialidad-card .card-btn-text { background-color: #ff4757; } /* Rojo */
+#reposteria-card .card-btn-text   { background-color: #ff9f43; } /* Naranja */
+#karaoke-card .card-btn-text      { background-color: #6c5ce7; } /* Púrpura */
+#manga-card .card-btn-text        { background-color: #341f97; } /* Azul */
+
+/* Efectos específicos al hacer hover en la imagen del Manga */
+#manga-card:hover .card-img {
+    filter: sepia(0) contrast(1.1);
+    transform: scale(1.1) rotate(1deg);
+}                            
+
+/*efecto alert*/
+/* Contenedor de notificaciones */
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo de la burbuja de mensaje */
+.custom-toast {
+    min-width: 250px;
+    padding: 15px 20px;
+    background: #333;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.4s ease-out forwards;
+}
+
+/* =========================================
+   🌸 ANIME UI (AISLADO – )
+   ========================================= */
+
+/* fuentes solo para anime */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700&family=Pacifico&display=swap');
+
+/* wrapper anime */
+.anime-scope {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* fondo anime */
+.anime-scope.anime-background {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* imagen */
+.anime-scope.anime-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("https://res.cloudinary.com/dj0cbwsvk/image/upload/v1768972382/footer_zeerxb.jpg");
+    background-size: contain;
+    background-position:right  center;
+    background-repeat: no-repeat;
+
+    opacity: 0.85;
+    z-index: 0;
+}
+
+/* overlay suave */
+.anime-scope.anime-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 192, 218, 0.15);
+    z-index: 0;
+}
+
+/* card anime */
+.anime-scope .anime-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    padding: 30px;
+    border: 2px solid #ffc0da;
+    animation: floatCard 4s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+     opacity: 0.85;
+}
+
+/* título */
+.anime-scope .anime-title {
+    font-family: 'Pacifico', cursive;
+    color: #ff6fae;
+    text-shadow: 0 0 8px rgba(255, 111, 174, 0.4);
+}
+
+/* inputs */
+.anime-scope .anime-input {
+    border-radius: 12px;
+    border: 2px solid #ffd6e8;
+}
+
+.anime-scope .anime-input:focus {
+    border-color: #ff6fae;
+    box-shadow: 0 0 10px rgba(255, 111, 174, 0.35);
+}
+
+/* botón */
+.anime-scope .anime-btn {
+    background: linear-gradient(135deg, #ff6fae, #ff9ecf);
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.anime-scope .anime-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(255, 111, 174, 0.4);
+}
+
+/* animación */
+@keyframes floatCard {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+
+
+/* ================= PROMOS & EVENTOS ================= */
+
+/* Contenedor principal de las promos */
+.promo-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Alinea contenido verticalmente */
+    height: 100%; /* Hace que todas midan lo mismo en el grid */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+/* Efecto Hover */
+.promo-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(62, 39, 35, 0.25);
+    border-color: #d32f2f;
+}
+
+/* Tamaño fijo de imagen para que no se descuadren */
+.promo-image-container {
+    height: 200px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.promo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    transition: transform 0.5s ease;
+}
+
+.promo-card:hover .promo-img {
+    transform: scale(1.15);
+}
+
+/* Overlay oscuro en hover */
+.promo-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(62, 39, 35, 0);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.promo-card:hover .promo-image-container::after {
+    background: rgba(62, 39, 35, 0.15);
+}
+
+/* Contenido de la card */
+.promo-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón siempre al fondo */
+    flex-grow: 1; /* Hace que el área de texto crezca igual en todas */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.promo-card:hover .promo-content {
+    padding: 25px;
+}
+
+.promo-title {
+    font-family: 'Playfair Display', serif;
+    color: #3e2723;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.promo-card:hover .promo-title {
+    color: #d32f2f;
+}
+
+.promo-desc {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.promo-card:hover .promo-desc {
+    color: #5d4037;
+}
+
+/* Botón interactivo */
+.btn-promo {
+    background-color: #3e2723;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    align-self: center; /* Centra el botón */
+    box-shadow: 0 4px 10px rgba(62, 39, 35, 0.2);
+}
+
+.btn-promo:hover {
+    background-color: #d32f2f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(211, 47, 47, 0.3);
+}
+
+.btn-promo:active {
+    transform: translateY(-1px);
+}
+
+/* Estilo para la card destacada (Promos estudiantes) */
+.promo-card.highlighted {
+    /* Sin estilos especiales, mantiene el hover general */
+}
+
+/* fin de promos y eventos */
+
+
+
+                                        /*Historia*/
+/* Estructura Principal */
+.history-section {
+  padding: 80px 20px;
+  background-color: #fdfaf6;
+}
+
+.history-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  gap: 50px; /* Espacio entre imagen y texto */
+  flex-wrap: wrap; /* Para móviles */
+}
+
+/* La Cajita de la Imagen */
+.history-image-box {
+  flex: 1;
+  min-width: 350px;
+  height: 500px; /* Altura tipo banner */
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 20px 20px 0px #e67e22; /* El detalle de la caja decorativa */
+  transition: transform 0.3s ease;
+}
+
+.history-image-box:hover {
+  transform: translate(-5px, -5px);
+}
+
+.history-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen llene el espacio sin deformarse */
+  display: block;
+}
+
+/* Overlay decorativo sobre la imagen */
+.image-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(230, 126, 34, 0.9);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Estilos de Texto */
+.history-content {
+  flex: 1.2;
+  min-width: 300px;
+}
+
+.history-title { color: #e67e22; font-size: 1rem; text-transform: uppercase; margin-bottom: 10px; }
+.history-subtitle { font-size: 2.8rem; margin: 0 0 15px; color: #2c3e50; }
+.history-text p { line-height: 1.7; color: #555; margin-bottom: 20px; }
+
+/* Iconos y Links */
+.history-social { display: flex; gap: 15px; margin-bottom: 30px; }
+.social-icon { color: #2c3e50; text-decoration: none; font-size: 24px; }
+.history-link { 
+  display: flex; 
+  align-items: center; 
+  text-decoration: none; 
+  color: #e67e22; 
+  font-weight: bold; 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .history-container { flex-direction: column; }
+  .history-image-box { width: 100%; height: 300px; min-width: 100%; }
+}
+/*fIN sección historia*/
+
+/*Footer*/
+/* Importar iconos (añadir en el head de tu HTML) */
+/* <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> */
+
+.l-footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 3rem 0 2rem;
+    border-top: 4px solid #e67e22;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #e67e22;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #bdc3c7;
+}
+
+.closed {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Estilos del Menú de Redes Sociales */
+.social-menu {
+    display: flex;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Colores de marca al pasar el mouse */
+.social-link.instagram:hover { background: #E1306C; transform: translateY(-3px); }
+.social-link.facebook:hover { background: #1877F2; transform: translateY(-3px); }
+.social-link.tiktok:hover { background: #000000; border: 1px solid #ff0050; transform: translateY(-3px); }
+.social-link.whatsapp:hover { background: #25D366; transform: translateY(-3px); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-menu {
+        justify-content: center;
+    }
+}
+/*fIN sección Footer*/
+
+/*=====Incio Opiniones=====*/
+:root {
+    --primary-color: #4a90e2;
+    --text-color: #333;
+    --bg-light: #f9f9f9;
+}
+
+.testimonials {
+    padding: 60px 20px;
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+.feedback {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.client-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    display: block;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.role {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/*=====Fin de Opiniones=====*/
+
+
+
+
+/* ================================
+   MAPA TOMIOKA COFFEE
+   ================================ */
+
+.mapa-section {
+  background-color: #f7f3f2; /* separa visualmente del footer */
+}
+
+#mapa-temuco {
+  width: 100%;
+  max-width: 1000px;
+  height: 420px;
+  margin: 2rem auto 0;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(62, 39, 35, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #mapa-temuco {
+    height: 320px;
+  }
+}
+
+/*fin de mapa */
+
+
+.anime-scope {
+    display: flex;
+    justify-content: flex-start; /* ⬅ lo empuja a la izquierda */
+    align-items: center;
+    padding-left: 5%;
+}
+
+.anime-card {
+    max-width: 420px;
+    z-index: 2;
+}
+
+
+
+
+
